@@ -27,3 +27,26 @@ const rps = (p1, p2) => {
         return "Player 2 won!";
     }
   }
+
+//Clock shows h hours, m minutes and s seconds after midnight.
+//Your task is to write a function which returns the time since midnight in milliseconds.
+
+function past(h, m, s){
+    const convertHours = h * 60 * 60 * 1000
+    const convertMins = m * 60 * 1000
+    const convertSeconds = s * 1000
+    return convertHours + convertMins + convertSeconds;
+  }
+
+//You get an array of numbers, return the sum of all of the positives ones. Example [1,-4,7,12] => 1 + 7 + 12 = 20
+//Note: if there is nothing to sum, the sum is default to 0.
+
+function positiveSum(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] > 0){
+        sum = sum + arr[i];
+      }
+    }
+    return sum
+  }
